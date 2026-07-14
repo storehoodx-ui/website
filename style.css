@@ -1,0 +1,233 @@
+/* Color Palette & Global Settings */
+:root {
+    --primary: #D6A76C; /* Gold/Caramel */
+    --dark-bg: #1A120B; /* Deep Mocha */
+    --light-text: #F5EDE3;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .logo {
+    font-family: var(--font-heading);
+}
+
+em {
+    color: var(--primary);
+    font-style: italic;
+}
+
+/* --- Navbar --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(26, 18, 11, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(214, 167, 108, 0.2);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(26, 18, 11, 0.7), rgba(26, 18, 11, 0.9)), 
+                url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1920&q=80') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: #ccc;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: var(--primary);
+    color: var(--dark-bg);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #fff;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: var(--dark-bg);
+}
+
+/* --- Generic Section Styling --- */
+section {
+    min-height: 100vh;
+    padding: 120px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+/* --- About Section --- */
+.about {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    background: #231912;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    border: 4px solid var(--primary);
+}
+
+/* --- Menu Section --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.menu-card {
+    background: #231912;
+    border: 1px solid rgba(214, 167, 108, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.menu-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+/* --- Contact Section --- */
+.contact {
+    text-align: center;
+    background: linear-gradient(rgba(26, 18, 11, 0.9), rgba(26, 18, 11, 0.9)), 
+                url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=1920&q=80') center/cover;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.contact .btn {
+    margin-top: 30px;
+}
